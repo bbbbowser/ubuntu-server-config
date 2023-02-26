@@ -1,0 +1,17 @@
+version: "3"
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8053:80/tcp" #set to desired management port
+    environment:
+      TZ: 'America/New_York' #CHANGEME
+      WEBPASSWORD: 'this_is_a_secret' #CHANGEME
+    volumes:
+      - '/PATH/TO/HOST/DATA/etc-pihole:/etc/pihole' #CHANGEME
+      - '/PATH/TO/HOST/DATA/etc-dnsmasq.d:/etc/dnsmasq.d' #CHANGEME
+    restart: unless-stopped
