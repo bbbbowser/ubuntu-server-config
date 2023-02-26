@@ -1,0 +1,16 @@
+# netplan config file for static ip
+# place as /etc/netplan/static.yaml
+# make sure to backup old config files in /etc/netplan before applying netplan (sudo mv x-config.yaml x-config.yaml.bak)
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    enp7s0: #CHANGEME
+      addresses:
+        - 192.168.0.89/24 #CHANGEME
+      nameservers:
+        #search: [mydomain, otherdomain]
+        addresses: [1.1.1.1, 1.0.0.1] #CHANGEME
+      routes:
+        - to: default
+          via: 192.168.0.1 #CHANGEME
