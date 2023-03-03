@@ -1,7 +1,10 @@
 ## install and configure zsh and oh-my-zsh
-
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install zsh
+```
+sudo apt update && sudo apt upgrade -y
+```
+```
+sudo apt install zsh
+```
 
 the following script should ask if you want to set zsh as your default shell. make sure to say yes to this prompt.
 
@@ -19,8 +22,12 @@ logout and login to see changes applied
 
 ## configure zsh syntax highlighting and autosuggestion
 
-    git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+```
 
 modify `~/.zshrc` to include plugins
 
