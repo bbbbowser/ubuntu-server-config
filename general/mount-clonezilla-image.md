@@ -2,7 +2,7 @@ decompress the partition image. for example, if the image is using zstd compress
 
     unzstd <compressed-image-file>
     
-use imagemount from `partclone-utils` to temporarily mount the image
+use `imagemount` from `partclone-utils` to temporarily mount the image
 
     sudo modprobe nbd
      
