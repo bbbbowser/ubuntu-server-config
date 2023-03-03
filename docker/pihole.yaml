@@ -1,6 +1,6 @@
 version: "3"
 # More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
-# on ubuntu server, systemd-resolved.service must be disabled for pihole to be able to use port 53
+# on ubuntu server, systemd-resolved needs to be configured not to listen on port 53 - see note "pihole-notes.md"
 services:
   pihole:
     container_name: pihole
