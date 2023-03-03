@@ -1,6 +1,6 @@
-we need to stop systemd-resolved from lstening on port 53.
+in order to avoid DNS conflicts for the ubuntu server and docker containers, some changes need to be made to `systemd-resolved.service`
 
-edit the `/etc/systemd/resolved.conf` file:
+stop `systemd-resolved.service` from listening on port 53 by editing the `/etc/systemd/resolved.conf` file:
 ```
 sudo vim /etc/systemd/resolved.conf
 ```
