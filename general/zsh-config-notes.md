@@ -8,7 +8,6 @@ the following script should ask if you want to set zsh as your default shell. ma
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-
 ## set theme for zsh
 
 theme screenshots can be seen at https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
@@ -28,4 +27,3 @@ logout and login to see changes applied
 modify `~/.zshrc` to include plugins
 
     plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
