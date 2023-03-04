@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+    transmission-openvpn:
+        cap_add:
+            - NET_ADMIN
+        volumes:
+            - '/your/storage/path/:/data'
+            - '/your/config/path/:/config'
+        environment:
+            - OPENVPN_PROVIDER=PIA
+            - OPENVPN_CONFIG=netherlands
+            - OPENVPN_USERNAME=user
+            - OPENVPN_PASSWORD=pass
+            - LOCAL_NETWORK=192.168.0.0/24
+            - TZ=America/New_York
+            - HEALTH_CHECK_HOST=1.1.1.1
+            - TRANSMISSION_WEB_UI=flood-for-transmission
+            - TRANSMISSION_PEER_PORT_RANDOM_ON_START=true
+            - WEBPROXY_ENABLED=true # enables web proxy through the vpn to local devices via supplied port
+            - WEBPROXY_PORT=8282
+        logging:
+            driver: json-file
+            options:
+                max-size: 10m
+        ports:
+            - '9091:9091'
+            - '8282:8282'
+        image: haugene/transmission-openvpn
