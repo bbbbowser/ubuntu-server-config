@@ -4,8 +4,8 @@ services:
         cap_add:
             - NET_ADMIN
         volumes:
-            - '/your/storage/path/:/data'
-            - '/your/config/path/:/config'
+            - '/your/storage/path/:/data' #CHANGEME
+            - '/your/config/path/:/config' #CHANGEME
         environment:
             - OPENVPN_PROVIDER=PIA
             - OPENVPN_CONFIG=netherlands
