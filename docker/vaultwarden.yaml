@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    image: "vaultwarden/server:latest"
+    restart: unless-stopped
+    ports:
+      - '8022:80'
+    volumes:
+      - /PATH/TO/DATA:/data
+networks:
+  default:
+    external: true
+    name: nginx-network
